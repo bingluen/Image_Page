@@ -152,7 +152,7 @@
 
   看到這部份表示已經送出Pull Request了。
 
-  ![Finish pull requests](http://imgur.com/vbeLBBI)
+  ![Finish pull requests](http://i.imgur.com/vbeLBBI.png)
 
 #重要編譯指令
 
