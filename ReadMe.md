@@ -14,7 +14,7 @@
 
   下載後直接安裝即可
 
-  ###Package安裝
+###Package安裝
   從
 
     File > Setting > Install
@@ -31,7 +31,7 @@
   + react (自動幫react排版)
 
 
-  #####emmet設定
+#####emmet設定
     File > Setting > Pacakges > emmet > View Code
 
   會開啟pacakge的所在位置
@@ -99,10 +99,10 @@
 ##Fork專案
 
 #####首先，將整個專案Fork到自己的Github
-![Fork it](img/guides/1.png "How To fork")
+![Fork it](http://i.imgur.com/qpGSigb.png "How To fork")
 
 #####轉到自己的Github之後，copy一下Clone URL
-![Clone URL](img/guides/2.png "Where is clone URL")
+![Clone URL](http://i.imgur.com/7dKTV6Q.png "Where is clone URL")
 
 開啟command line，切換到要儲存專案的地方，輸入
 
@@ -136,6 +136,23 @@
   最後push到 Github上
 
       git push
+
+## Pull Request
+  當修改好的程式碼，可以透過pull request要求合併回ITAC的github上。
+
+  ![Pull Request](http://i.imgur.com/RF93r4C.png)
+
+  接著會看到這個畫面，點選一下Create pull request
+
+  ![Create pull request](http://i.imgur.com/Y3whEUB.png)
+
+  接著你可以寫一些訊息，例如你修改了什麼
+
+  ![open pull request](http://i.imgur.com/S9nNDVZ.png)
+
+  看到這部份表示已經送出Pull Request了。
+
+  ![Finish pull requests](http://imgur.com/vbeLBBI)
 
 #重要編譯指令
 
