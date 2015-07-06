@@ -1,6 +1,9 @@
+/*
+  載入模組
+ */
 var MainBlock = require('./MainBlock');
 //var IntroductionBlock = require('IntroductionBlock');
-//var ActivityBlock = require('ActivityBlock');
+var ActivityBlock = require('./ActivityBlock');
 //var ProjectBlock = require('ProjectBlock');
 
 var MainContainer = React.createClass({
@@ -8,11 +11,10 @@ var MainContainer = React.createClass({
         return (
             <div>
                 <MainBlock />
+                <ActivityBlock />
             </div>
         );
     }
 });
 
-React.render(<MainContainer />,
-    $('#MainContainer')[0]
-);
+React.render(<MainContainer />, $('#Container')[0]);
