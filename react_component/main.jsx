@@ -9,7 +9,7 @@ var ActivityBlock = require('./ActivityBlock');
 var MainContainer = React.createClass({
     render: function() {
         return (
-            <div>
+            <div id="reactRender">
                 <MainBlock />
                 <ActivityBlock />
             </div>
