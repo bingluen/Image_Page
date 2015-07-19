@@ -6,11 +6,13 @@ var MainBlock = require('./MainBlock');
 var ActivityBlock = require('./ActivityBlock');
 //var ProjectBlock = require('ProjectBlock');
 
+
+
 var MainContainer = React.createClass({displayName: "MainContainer",
     render: function() {
         return (
-            React.createElement("div", null, 
-                React.createElement(MainBlock, null), 
+            React.createElement("div", {id: "reactRender"},
+                React.createElement(MainBlock, null),
                 React.createElement(ActivityBlock, null)
             )
         );

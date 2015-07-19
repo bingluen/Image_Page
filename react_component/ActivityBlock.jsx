@@ -1,7 +1,7 @@
 /*
   載入config
  */
-var config = require('./config.json');
+var config = require('../config.json');
 
 var ActivityListSwiper;
 

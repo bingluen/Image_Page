@@ -1,3 +1,10 @@
+/*
+  載入config
+ */
+var config = require('../config.json');
+
+var ActivityListSwiper;
+
 var ActivityBlock = React.createClass({displayName: "ActivityBlock",
   render: function() {
     return (
@@ -9,72 +16,63 @@ var ActivityBlock = React.createClass({displayName: "ActivityBlock",
 });
 
 var ActivityList = React.createClass({displayName: "ActivityList",
-    getInitialState: function() {
-//初始化
-        var testData = require('../testData.json');
-        return {
-            data: testData.Activity
-        };
-    },
-    render: function() {
-        var ActivityData = this.state.data.map(function(activity, index, array) {
-          var active = (index == 0) ? 'active' : '';
-            return (
-                React.createElement(ActivityNode, {className: active, contents: activity.contents, photos: activity.photos, title: activity.title})
-            )
-        })
-        var indicators = this.state.data.map(function(activity, index) {
-            if (index) {
-                return (
-                    React.createElement("li", {"data-slide-to": index, "data-target": "#carousel-activity"})
-                )
-            } else {
-                return (
-                    React.createElement("li", {className: "active", "data-slide-to": index, "data-target": "#carousel-activity"})
-                )
-            }
-        });
-        return (
-            React.createElement("div", {className: "carousel slide", "data-ride": "carousel", id: "carousel-activity"}, 
-                React.createElement("ol", {className: "carousel-indicators"}, 
-                  indicators
-                ), 
-                React.createElement("div", {className: "carousel-inner", role: "listbox"}, 
-                    ActivityData
-                ), 
-                React.createElement("a", {className: "left carousel-control", "data-slide": "prev", href: "#carousel-activity", role: "button"}, 
-                    React.createElement("span", {"aria-hidden": "true", className: "glyphicon glyphicon-chevron-left"}), 
-                    React.createElement("span", {className: "sr-only"}, "Previous")
-                ), 
-                React.createElement("a", {className: "right carousel-control", "data-slide": "next", href: "#carousel-activity", role: "button"}, 
-                    React.createElement("span", {"aria-hidden": "true", className: "glyphicon glyphicon-chevron-right"}), 
-                    React.createElement("span", {className: "sr-only"}, "Next")
-                )
-            )
-        );
-    }
+  render: function() {
+    var ActivityNodes = this.state.data.map(function(currentNode, index) {
+      return React.createElement(ActivityNode, {key: index, title: currentNode.title, photos: currentNode.photos, contents: currentNode.contents})
+    });
+    return (
+      React.createElement("div", {className: "ActivityList swiper-container"}, 
+        React.createElement("div", {className: "swiper-wrapper"}, 
+          ActivityNodes
+        ), 
+        /* pagination */
+        React.createElement("div", {className: "swiper-pagination ActivityList-pagination"}), 
+
+        /* navigation buttons */
+        React.createElement("div", {className: "swiper-button-prev ActivityList-swiper-button-prev"}), 
+        React.createElement("div", {className: "swiper-button-next ActivityList-swiper-button-next"})
+      )
+    );
+  },
+  getInitialState: function() {
+    return ({
+      data: []
+    });
+  },
+  loadActivityFromServer: function() {
+    $.ajax({
+      url: 'http://' + config.back_end_server + '/' + config.api_root_path + '/' + config.app_path.activity,
+      dataType: 'json',
+      method: 'get',
+      success: function(response) {
+        this.setState({data :response.data});
+      }.bind(this)
+    });
+  },
+  componentDidMount: function() {
+    this.loadActivityFromServer();
+  },
+  componentDidUpdate: function(prevProps, prevState) {
+    ActivityListSwiper = new Swiper('.ActivityList', {
+        pagination: '.ActivityList-pagination',
+        paginationClickable: '.ActivityList-pagination',
+        nextButton: '.ActivityList-swiper-button-next',
+        prevButton: '.ActivityList-swiper-button-prev',
+        spaceBetween: 30,
+        effect: 'fade',
+        loop: 'true'
+    });
+  },
 });
 
 var ActivityNode = React.createClass({displayName: "ActivityNode",
-    render: function() {
-        return (
-            React.createElement("div", {className: this.props.className + " item slide"}, 
-              React.createElement("div", {className: "container"}, 
-                React.createElement("h3", null, 
-                    this.props.title
-                ), 
-                React.createElement("div", {className: "row"}, 
-                    React.createElement("div", {className: "col-md-6"}, 
-                        React.createElement("img", {className: "img-responsive img-rounded", src: this.props.photos[0]})
-                    ), 
-                    React.createElement("div", {className: "col-md-6"}, 
-                        this.props.contents
-                    )
-                )
-              )
-            )
-        );
-    }
+  render: function() {
+    return (
+      React.createElement("div", {className: "swiper-slide"}, 
+        this.props.title
+      )
+    );
+  }
 });
 
 module.exports = ActivityBlock;
