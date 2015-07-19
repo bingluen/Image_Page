@@ -1,0 +1,7 @@
+{
+  "back_end_server": "127.0.0.1:8080",
+  "api_root_path": "data",
+  "app_path": {
+    "activity": "activity.json"
+  }
+}

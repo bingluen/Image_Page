@@ -14,15 +14,3 @@ body {
     height: 100%;
     margin: 0 auto;
 }
-
-.slide {
-    height: 100%;
-    .carousel-control {
-        background-image: none;
-    }
-}
-
-.item:before
-{
-  @include filter(blur(2px));
-}
