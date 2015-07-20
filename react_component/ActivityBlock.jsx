@@ -16,6 +16,7 @@ var ActivityBlock = React.createClass({
   }
 });
 
+
 var ActivityList = React.createClass({
   render: function() {
     var ActivityNodes = this.state.data.map(function(currentNode, index) {
@@ -26,9 +27,6 @@ var ActivityList = React.createClass({
         <div className="swiper-wrapper">
           {ActivityNodes}
         </div>
-        {/* pagination */}
-        <div className="swiper-pagination ActivityList-pagination"></div>
-
         {/* navigation buttons */}
         <div className="swiper-button-prev ActivityList-swiper-button-prev"></div>
         <div className="swiper-button-next ActivityList-swiper-button-next"></div>
@@ -54,17 +52,28 @@ var ActivityList = React.createClass({
     this.loadActivityFromServer();
   },
   componentDidUpdate: function(prevProps, prevState) {
-    ActivityListSwiper = new Swiper('.ActivityList', {
-        pagination: '.ActivityList-pagination',
-        paginationClickable: '.ActivityList-pagination',
+    var ActivityListSwiper = new Swiper('.ActivityList', {
         nextButton: '.ActivityList-swiper-button-next',
         prevButton: '.ActivityList-swiper-button-prev',
         spaceBetween: 30,
         effect: 'fade',
+        paginationClickable: true,
         loop: 'true'
+    });
+    var NodePhotosSwiper = new Swiper('.NodePhotoList', {
+        pagination: '.NodePhotoList-pagination',
+        spaceBetween: 30,
+        effect: 'fade',
+        centeredSlides: true,
+        paginationClickable: true,
+        autoplay: 2500
     });
   }
 });
+
+
+
+
 
 var ActivityNode = React.createClass({
   render: function() {
@@ -83,12 +92,16 @@ var ActivityNode = React.createClass({
   }
 });
 
+
+
+
 var NodePhotoList = React.createClass({
   render: function() {
     var PhotoElements = this.props.photos.map(function(currentPhoto, index){
       return <PhotoElement url={currentPhoto} key={index} />
     });
-    console.log(this.props.index);
+      
+    console.log(this.props.photos);
     return (
       <div className="NodePhotoList swiper-container" data-index={this.props.index}>
         <div className="swiper-wrapper">
@@ -97,24 +110,11 @@ var NodePhotoList = React.createClass({
         {/* pagination */}
         <div className="swiper-pagination NodePhotoList-pagination" data-index={this.props.index}></div>
 
-        {/* navigation buttons */}
-        <div className="swiper-button-prev NodePhotoList-swiper-button-prev" data-index={this.props.index}></div>
-        <div className="swiper-button-next NodePhotoList-swiper-button-next" data-index={this.props.index}></div>
       </div>
     );
   },
   componentDidUpdate: function(prevProps, prevState) {
-    /*內層爛掉了只好自己來重刻 ＝＝
-    NodePhotosSwiper = new Swiper('.NodePhotoList[data-index='+this.props.index+']', {
-        pagination: '.NodePhotoList-pagination[data-index='+this.props.index+']',
-        paginationClickable: '.NodePhotoList-pagination[data-index='+this.props.index+']',
-        nextButton: '.NodePhotoList-swiper-button-next[data-index='+this.props.index+']',
-        prevButton: '.NodePhotoList-swiper-button-prev[data-index='+this.props.index+']',
-        spaceBetween: 30,
-        effect: 'fade',
-        centeredSlides: true,
-        autoplay: 2500
-    });*/
+    
 
   }
 });
@@ -123,10 +123,7 @@ var PhotoElement = React.createClass({
   render: function() {
     return (
       <div className="swiper-slide">
-        {/* Required swiper-lazy class and image source specified in data-src attribute */}
         <img src={this.props.url} className="photoElement ui big rounded image" />
-        {/* <!-- Preloader image -->*/}
-        {/*<div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>*/}
       </div>
     );
   }
