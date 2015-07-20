@@ -5,12 +5,10 @@ MainBlock - by Erickson
 var MainBlock = React.createClass({displayName: "MainBlock",
     render: function() {
         return (
-            React.createElement("div", {className: "ui inverted vertical masthead center aligned segment", id: "MainBlock"}, 
-                "test"
-            )
+            React.createElement("section", {className: "block", id: "MainBlock"}, "ITAC")
         );
     }
 });
 
-
+//把模組匯出
 module.exports = MainBlock;

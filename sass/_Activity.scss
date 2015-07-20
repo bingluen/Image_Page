@@ -1,0 +1,15 @@
+.ActivityList {
+  height: 100%;
+  > .swiper-wrapper {
+    min-height: 100%;
+    > .swiper-slide {
+      height: 100%;
+      background-color: hsl(41,82%,50%);
+    }
+  }
+}
+
+.ActivityNodeContainer {
+  width:80%;
+  margin: 5em;
+}
