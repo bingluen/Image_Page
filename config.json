@@ -1,6 +1,6 @@
 {
-  "back_end_server": "127.0.0.1:62429",
-  "api_root_path": "data",
+  "back_end_server": "itac-yzu.github.io/HomePage/",
+  "api_root_path": "testData",
   "app_path": {
     "activity": "activity.json"
   }
