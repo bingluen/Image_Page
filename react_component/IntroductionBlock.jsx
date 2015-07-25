@@ -1,21 +1,11 @@
-/*
-  載入config
- */
-var config = require('../config.json')
-
 var IntroductionBlock = React.createClass({
   render: function() {
     return (
-      <section className="block" id="IntroductionBlock">
-        <div className="ui container">
-          <h1>
-            About ITAC
-          </h1>
-
-        </div>
+      <section className="block" id="IntroductionBlock" data-scroll-index={this.props.scrollIndex}>
       </section>
     );
   }
 });
+
 
 module.exports = IntroductionBlock;
