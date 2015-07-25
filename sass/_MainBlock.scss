@@ -1,3 +1,41 @@
 #MainBlock {
-  background-color: hsla(90,76%,50%,.87);
+  height:100%;
+  background-image: url('../img/main/background_layer1.jpg');
+  background-size: 100% auto;
+  background-attachment: fixed;
+  @media all and (orientation: portrait) {
+    background-size: auto 100%;
+  }
+  background-repeat: no-repeat;
+  color: rgb(233, 233, 233);
+  .container {
+    position: relative;
+    top: 10%;
+    text-align: center;
+  }
+  img {
+    @media screen and (max-width: 568px) and (orientation: landscape) {
+      width: 150px !important;
+    }
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .logo-text {
+    padding: 2.5em;
+    width: 250px;
+    height: auto;
+  }
+
+
+
+  .button {
+    position: absolute;
+    @include calc(top, "100% - 1.5em");
+    @include calc(left, "50% - 0.375em");
+    font-size: 3em;
+    a {
+      color: rgba(209,209,209,.68)
+    }
+  }
 }
