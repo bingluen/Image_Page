@@ -1,4 +1,5 @@
 .sass-cache/
 react_build/
-css/style.css
-
+react_component/
+sass/
+config.*
