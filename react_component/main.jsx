@@ -5,7 +5,7 @@
 var MainBlock = require('./MainBlock');
 var IntroductionBlock = require('./IntroductionBlock');
 var ActivityBlock = require('./ActivityBlock');
-var ProjectBlock = require('ProjectBlock');
+var ProjectBlock = require('./ProjectBlock');
 
 
 var MainContainer = React.createClass({
@@ -19,6 +19,10 @@ var MainContainer = React.createClass({
             </div>
         );
     }
+});
+
+$(function() {
+    $.scrollIt();
 });
 
 React.render(<MainContainer />, $('#Container')[0]);
