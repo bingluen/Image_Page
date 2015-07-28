@@ -1,7 +1,5 @@
 #開發環境
   + Node.js (io.js)
-    + React-tools
-    + browserify
   + Ruby
     + compass
     + sass
@@ -61,16 +59,6 @@
 
 基本上下一步大法即可
 
-###安裝Nodejs Package
-  React-tools
-
-    npm install react-tools -g
-
-  browserify
-
-    npm install browserify -g
-
-
 #安裝Ruby
   Ruby中文網站 https://www.ruby-lang.org/zh_tw/
 
@@ -93,6 +81,15 @@
 
   Mac使用者請先安裝Xcode即可使用git
   P.S.Git在Mac上需具有管理權限才能使用，記得先將帳戶設定密碼，搭配Sudo使用
+
+#編譯方法
+  輸入
+
+    npm run gulp build
+
+  就可以自動編譯。
+
+  完成品只包含 **js/ img/ css/ index.html favicon.icon**
 
 #一起動手打造官方網站
 
@@ -153,22 +150,3 @@
   看到這部份表示已經送出Pull Request了。
 
   ![Finish pull requests](http://i.imgur.com/vbeLBBI.png)
-
-#重要編譯指令
-
-###Sass, Scss自動編譯
-
-  開啟command line，在專案目錄底下執行。保持command line不關閉的狀況下，只要檔案存檔就會自動轉換。
-
-    compass watch
-
-###React JSX自動轉換
-  開啟command line，在專案目錄底下執行。保持command line不關閉的狀況下，只要檔案存檔就會自動轉換。
-
-    jsx --watch --extension jsx react_component/ react_build/
-
-###Browserify 打包JS（React component）
-  開啟command line，在專案目錄底下執行。
-  每次變更完記得要執行這個指令，js重新打包後網頁才會出現剛剛寫的component。
-
-    browserify react_build/main.js > js/bundle.js
