@@ -6,5 +6,3 @@ var ProjectBlock = React.createClass({
     );
   }
 });
-
-module.exports = ProjectBlock;

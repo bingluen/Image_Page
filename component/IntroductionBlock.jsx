@@ -10,6 +10,3 @@ var IntroductionBlock = React.createClass({
     );
   }
 });
-
-
-module.exports = IntroductionBlock;

@@ -1,7 +1,0 @@
-{
-  "back_end_server": "itac-yzu.github.io/HomePage/",
-  "api_root_path": "testData",
-  "app_path": {
-    "activity": "activity.json"
-  }
-}

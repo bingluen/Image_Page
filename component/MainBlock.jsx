@@ -21,6 +21,3 @@ var MainBlock = React.createClass({
     );
   }
 });
-
-
-module.exports = MainBlock;

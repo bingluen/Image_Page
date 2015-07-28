@@ -6,6 +6,3 @@ var ActivityBlock = React.createClass({
     );
   }
 });
-
-
-module.exports = ActivityBlock;

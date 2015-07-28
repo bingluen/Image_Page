@@ -1,4 +1,6 @@
 .sass-cache/
-react_build/
+.react-cache/
 css/style.css
-
+node_modules/
+.DS_store
+js/bundle.js
