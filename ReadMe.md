@@ -85,11 +85,12 @@
 #編譯方法
   輸入
 
+    npm install
     npm run gulp build
 
   就可以自動編譯。
 
-  完成品只包含 **js/ img/ css/ index.html favicon.icon**
+  完成品只包含 **js/, img/, css/, index.html and favicon.icon** 三個資料夾，兩個檔案。
 
 #一起動手打造官方網站
 
