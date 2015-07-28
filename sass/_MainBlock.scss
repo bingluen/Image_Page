@@ -1,20 +1,23 @@
 #MainBlock {
-  height:100%;
+  min-height:100%;
   background-image: url('../img/main/background_layer1.jpg');
   background-size: 100% auto;
   background-attachment: fixed;
   @media all and (orientation: portrait) {
     background-size: auto 100%;
   }
-  background-repeat: no-repeat;
-  color: rgb(233, 233, 233);
+  background-repeat: repeat-y;
+
   .container {
     position: relative;
-    top: 10%;
+    top: 15%;
+    @media screen and (max-width: 640px) and (orientation: landscape) {
+      top: 10%;
+    }
     text-align: center;
   }
   img {
-    @media screen and (max-width: 568px) and (orientation: landscape) {
+    @media screen and (max-width: 640px) and (orientation: landscape) {
       width: 150px !important;
     }
     margin: 0 auto;
@@ -30,7 +33,7 @@
 
 
   .button {
-    position: absolute;
+    position: fixed;
     @include calc(top, "100% - 1.5em");
     @include calc(left, "50% - 0.375em");
     font-size: 3em;

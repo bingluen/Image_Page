@@ -1,3 +1,15 @@
 #IntroductionBlock {
-  
+  min-height:100%;
+  background-image: url('../img/intro/_DSC3794.JPG');
+  background-size: 100% auto;
+  background-attachment: fixed;
+  @media all and (orientation: portrait) {
+    background-size: auto 100%;
+  }
+  color: $text_color;
+  .container {
+    padding-top: 5em;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
