@@ -1,3 +1,4 @@
+/* global variable */
 html,
 body {
   height: 100%;
@@ -15,9 +16,13 @@ body {
 .block {
   height: 100%;
   margin: 0 auto;
+  color: white !important;
 }
 .block .container {
   margin: 0 auto;
+}
+.block h1 {
+  color: white !important;
 }
 
 .filter-blur {
@@ -36,12 +41,11 @@ body {
 }
 
 #MainBlock {
-  height: 100%;
+  min-height: 100%;
   background-image: url("../img/main/background_layer1.jpg");
   background-size: 100% auto;
   background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: #e9e9e9;
+  background-repeat: repeat-y;
 }
 @media all and (orientation: portrait) {
   #MainBlock {
@@ -50,14 +54,19 @@ body {
 }
 #MainBlock .container {
   position: relative;
-  top: 10%;
+  top: 15%;
   text-align: center;
+}
+@media screen and (max-width: 640px) and (orientation: landscape) {
+  #MainBlock .container {
+    top: 10%;
+  }
 }
 #MainBlock img {
   margin: 0 auto;
   position: relative;
 }
-@media screen and (max-width: 568px) and (orientation: landscape) {
+@media screen and (max-width: 640px) and (orientation: landscape) {
   #MainBlock img {
     width: 150px !important;
   }
@@ -68,7 +77,7 @@ body {
   height: auto;
 }
 #MainBlock .button {
-  position: absolute;
+  position: fixed;
   top: -webkit-calc(100% - 1.5em);
   top: calc(100% - 1.5em);
   left: -webkit-calc(50% - 0.375em);
@@ -77,4 +86,30 @@ body {
 }
 #MainBlock .button a {
   color: rgba(209, 209, 209, 0.68);
+}
+
+#IntroductionBlock {
+  min-height: 100%;
+  background-image: url("../img/intro/_DSC3794.JPG");
+  background-size: 100% auto;
+  background-attachment: fixed;
+  color: white;
+}
+@media all and (orientation: portrait) {
+  #IntroductionBlock {
+    background-size: auto 100%;
+  }
+}
+#IntroductionBlock .container {
+  padding-top: 5em;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#ActivityBlock {
+  height: 100%;
+}
+
+#ProjectBlock {
+  height: 100%;
 }
