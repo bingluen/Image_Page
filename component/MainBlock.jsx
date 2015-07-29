@@ -12,12 +12,21 @@ var MainBlock = React.createClass({
             <img className="logo-text ui image" src="img/main/itac.png" />
           </div>
         </div>
-        <div className="button">
-          <a href="#" data-scroll-nav={parseInt(this.props.scrollIndex) + 1}>
-            <i className="chevron down icon" />
-          </a>
-        </div>
+        <ButtonDown index={this.props.scrollIndex + 1}/>
       </section>
     );
+  }
+});
+
+var ButtonDown = React.createClass({
+  render: function() {
+    console.log('Call render');
+    return (
+      <div className="button">
+        <a href="#" data-scroll-nav={this.props.index}>
+          <i className="chevron down icon" />
+        </a>
+      </div>
+    )
   }
 });
