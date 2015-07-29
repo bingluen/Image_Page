@@ -6,20 +6,19 @@ var plugins = require('gulp-load-plugins')({
 });
 
 
-
 gulp.task('build', ['style', 'react']);
 
 
 gulp.task('style', function() {
   gulp.src('./sass/')
-    .pipe(plugins.compass());
-  gulp.src('css/style.css')
-    .pipe(plugins.minifyCSS())
-    .pipe(gulp.dest('css'));
+    .pipe(plugins.changed('.sass-cache'))
+    .pipe(plugins.compass())
+    .pipe(plugins.minifyCSS());
 });
 
 gulp.task('react', function() {
   gulp.src('./component/*.jsx')
+    .pipe(plugins.changed('.react-cache'))
     .pipe(plugins.react())
     .pipe(gulp.dest('.react-cache'))
     .pipe(plugins.uglify())
