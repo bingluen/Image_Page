@@ -33,7 +33,7 @@
 
 
   .button {
-    position: fixed;
+    position: absolute;
     @include calc(top, "100% - 1.5em");
     @include calc(left, "50% - 0.375em");
     font-size: 3em;
