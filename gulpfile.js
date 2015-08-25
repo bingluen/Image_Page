@@ -5,9 +5,12 @@ var plugins = require('gulp-load-plugins')({
   }
 });
 
+paths = {
+  scss: ['./sass/**/*.scss']
+}
 
-gulp.task('build', ['style', 'react']);
 
+gulp.task('build', ['style']);
 
 gulp.task('style', function() {
   gulp.src('./sass/')
@@ -24,4 +27,9 @@ gulp.task('react', function() {
     .pipe(plugins.uglify())
     .pipe(plugins.concat('bundle.js'))
     .pipe(gulp.dest('./js/'))
-})
+});
+
+
+gulp.task('watch', function() {
+  gulp.watch(paths.scss, ['style']);
+});
