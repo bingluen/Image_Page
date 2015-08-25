@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "itac image page",
   "main": "index.js",
-  "scripts": {
-    "gulp": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/erickson-makotoki/Image_Page.git"
@@ -18,7 +14,6 @@
   },
   "homepage": "https://github.com/erickson-makotoki/Image_Page#readme",
   "devDependencies": {
-    "gulp": "^3.9.0",
     "gulp-browserify": "^0.5.1",
     "gulp-changed": "^1.2.1",
     "gulp-compass": "^2.1.0",

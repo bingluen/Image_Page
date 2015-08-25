@@ -1,97 +1,3 @@
-#開發環境
-  + Node.js (io.js)
-  + Ruby
-    + compass
-    + sass
-  + Git
-
-#編輯器推薦
-  大家可以採用自己喜歡的Editor，如果想跟我一起用Atom的可以參考這裡。
-
-  <a href="https://atom.io/">Atom官方網站</a>
-
-  下載後直接安裝即可
-
-###Package安裝
-  從
-
-    File > Setting > Install
-
-  進行安裝
-
-  只要在搜尋框輸入套件名稱即可
-
-  推薦安裝清單
-  + css-snippet (css語法提示)
-  + docblockr (寫註解用)
-  + emmet (HTML自動補結束tag)
-  + nuclide (Facebook官方開發的React package、搜尋nuclide-installer)
-  + react (自動幫react排版)
-
-
-#####emmet設定
-    File > Setting > Pacakges > emmet > View Code
-
-  會開啟pacakge的所在位置
-
-  在目錄放入此檔案
-
-  https://github.com/emmetio/emmet/blob/master/lib/snippets.json
-
-
-
-#安裝Node.js
-  (這裡安裝io.js為主)
-
-  官方網站  https://iojs.org/zh-tw/index.html
-
-  安裝檔案下載
-  + Windows 32
-
-    https://iojs.org/dist/v2.3.3/iojs-v2.3.3-x86.msi
-
-  + Windows 64
-
-    https://iojs.org/dist/v2.3.3/iojs-v2.3.3-x64.msi
-  + Mac
-
-    https://iojs.org/dist/v2.3.3/iojs-v2.3.3.pkg
-
-基本上下一步大法即可
-
-#安裝Ruby
-  Ruby中文網站 https://www.ruby-lang.org/zh_tw/
-
-  Windows 可以用 <a href="http://rubyinstaller.org/">Ruby installer</a>，Mac則已經內建。
-
-###安裝pacakge
-
-  安裝Sass
-
-    gem install sass
-
-  安裝compass
-
-    gem install compass
-
-#安裝Git
-  Windows可以透過Git官方網站取得安裝程式
-
-  https://git-scm.com/
-
-  Mac使用者請先安裝Xcode即可使用git
-  P.S.Git在Mac上需具有管理權限才能使用，記得先將帳戶設定密碼，搭配Sudo使用
-
-#編譯方法
-  輸入
-
-    npm install
-    npm run gulp build
-
-  就可以自動編譯。
-
-  完成品只包含 **js/, img/, css/, index.html and favicon.icon** 三個資料夾，兩個檔案。
-
 #一起動手打造官方網站
 
 ##Fork專案
@@ -151,3 +57,106 @@
   看到這部份表示已經送出Pull Request了。
 
   ![Finish pull requests](http://i.imgur.com/vbeLBBI.png)
+
+
+#開發環境
+  + Node.js (io.js)
+  + Ruby
+    + compass
+    + sass
+  + Git
+
+#編輯器推薦
+  大家可以採用自己喜歡的Editor，如果想跟我一起用Atom的可以參考這裡。
+
+  <a href="https://atom.io/">Atom官方網站</a>
+
+  下載後直接安裝即可
+
+###Package安裝
+  從
+
+    File > Setting > Install
+
+  進行安裝
+
+  只要在搜尋框輸入套件名稱即可
+
+  推薦安裝清單
+  + css-snippet (css語法提示)
+  + docblockr (寫註解用)
+  + emmet (HTML自動補結束tag)
+
+
+#####emmet設定
+    File > Setting > Pacakges > emmet > View Code
+
+  會開啟pacakge的所在位置
+
+  在目錄放入此檔案
+
+  https://github.com/emmetio/emmet/blob/master/lib/snippets.json
+
+
+
+#安裝Node.js
+  (這裡安裝io.js為主)
+
+  官方網站  https://iojs.org/zh-tw/index.html
+
+  安裝檔案下載
+  + Windows 32
+
+    https://iojs.org/dist/v2.3.3/iojs-v2.3.3-x86.msi
+
+  + Windows 64
+
+    https://iojs.org/dist/v2.3.3/iojs-v2.3.3-x64.msi
+  + Mac
+
+    https://iojs.org/dist/v2.3.3/iojs-v2.3.3.pkg
+
+基本上下一步大法即可
+
+#安裝Ruby
+  Ruby中文網站 https://www.ruby-lang.org/zh_tw/
+
+  Windows 可以用 <a href="http://rubyinstaller.org/">Ruby installer</a>，Mac則已經內建。
+
+#安裝pacakge
+
+  安裝Sass
+
+    gem install sass
+
+  安裝compass
+
+    gem install compass
+
+#安裝Git
+  Windows可以透過Git官方網站取得安裝程式
+
+  https://git-scm.com/
+
+  Mac使用者請先安裝Xcode即可使用git
+  P.S.Git在Mac上需具有管理權限才能使用，記得先將帳戶設定密碼，搭配Sudo使用
+
+#安裝Gulp腳本管理
+
+  npm install -g gulp
+
+#編譯方法
+
+  首次進行編輯先輸入
+
+    npm install
+
+  會自動安裝必要開發工具
+
+  在網頁進行編輯時，可以開啟terminal，執行
+
+    gulp watch
+
+  就可以在scss有變更時自動編譯。
+
+  完成品只包含 **js/, img/, css/, index.html and favicon.icon** 三個資料夾，兩個檔案。

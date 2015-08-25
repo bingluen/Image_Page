@@ -4,3 +4,4 @@ css/style.css
 node_modules/
 .DS_store
 js/bundle.js
+component/
