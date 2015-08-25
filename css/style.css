@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* global variable */
 html,
 body {
@@ -108,6 +109,19 @@ body {
 
 #ActivityBlock {
   height: 100%;
+=======
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+#MainBlock {
+  background-size: cover;
+  background: url("../img/main/main.jpg");
+  background-position: center center;
+  min-height: 100%;
+>>>>>>> master
 }
 
 #ProjectBlock {
