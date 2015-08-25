@@ -1,5 +1,4 @@
+.DS_store
+.react-cache/
 .sass-cache/
-react_build/
-react_component/
-sass/
-config.*
+node_modules/
