@@ -2,15 +2,57 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-}
-
-#MainBlock {
+  color: #d4d4d4;
   background-size: cover;
   background: url("../img/main/main.jpg");
   background-position: center center;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section {
   min-height: 100%;
 }
 
-#ProjectBlock {
-  height: 100%;
+#MainBlock h1, #MainBlock h2 {
+  text-align: center;
+}
+
+#logo {
+  position: relative;
+  padding-top: -webkit-calc(35% - 20em);
+  padding-top: calc(35% - 20em);
+  left: -webkit-calc(50% - 10em);
+  left: calc(50% - 10em);
+  width: 20em;
+}
+@media (max-width: 768px) and (orientation: portrait) {
+  #logo {
+    padding-top: -webkit-calc(40% - 10em);
+    padding-top: calc(40% - 10em);
+    left: -webkit-calc(50% - 10em);
+    left: calc(50% - 10em);
+    width: 20em;
+  }
+}
+@media (max-width: 320px) and (orientation: portrait) {
+  #logo {
+    padding-top: -webkit-calc(40% - 6em);
+    padding-top: calc(40% - 6em);
+    left: -webkit-calc(50% - 6em);
+    left: calc(50% - 6em);
+    width: 12em;
+  }
+}
+
+#logo-text {
+  position: relative;
+  width: 10em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  left: -webkit-calc(50% - 5em);
+  left: calc(50% - 5em);
 }
