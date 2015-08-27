@@ -6,13 +6,21 @@ html, body{
   background-size: cover;
   background: url('../img/main/main.jpg');
   background-position: center center;
+  background-attachment: fixed;
 }
 
 .content {
   width:80%;
   margin: 0 auto;
+  > .content {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 section {
+  p {
+    font-size: 1.3em;
+  }
   min-height: 100%;
 }
