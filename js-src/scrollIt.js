@@ -90,7 +90,6 @@
          * sets the currently active item
          */
         var updateActive = function(ndx) {
-          console.log(ndx);
             if(settings.onPageChange && ndx && (active != ndx)) settings.onPageChange(ndx);
 
             active = ndx;
@@ -107,7 +106,7 @@
             var winTop = $(window).scrollTop();
             /**
              * upper bound must -4, the active will Work properly
-             * -4 is magic number by watch 
+             * -4 is magic number by watch
              */
             var visible = $('[data-scroll-index]').filter(function(ndx, div) {
                 return winTop >= $(div).offset().top + settings.topOffset &&
