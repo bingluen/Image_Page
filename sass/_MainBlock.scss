@@ -72,6 +72,6 @@
   position: absolute;
   font-size: 50px !important;
   @include calc('left', '50% - 25px');
-  @include calc('top', '90% - 25px');
+  //@include calc('top', '90% - 25px');
   @include animation(0s, 1.2s, jumping, infinite);
 }
