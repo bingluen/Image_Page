@@ -47,6 +47,24 @@ section h1, section h2 {
   left: calc(50% - 10em);
   width: 20em;
 }
+@media (orientation: portrait) {
+  #logo {
+    padding-top: -webkit-calc(50% - 20em);
+    padding-top: calc(50% - 20em);
+    left: -webkit-calc(50% - 20em);
+    left: calc(50% - 20em);
+    width: 40em;
+  }
+}
+@media (max-width: 1024px) and (orientation: portrait) {
+  #logo {
+    padding-top: -webkit-calc(50% - 15em);
+    padding-top: calc(50% - 15em);
+    left: -webkit-calc(50% - 15em);
+    left: calc(50% - 15em);
+    width: 30em;
+  }
+}
 @media (max-width: 768px) and (orientation: portrait) {
   #logo {
     padding-top: -webkit-calc(40% - 10em);
@@ -91,6 +109,20 @@ section h1, section h2 {
   margin-bottom: 2em;
   left: -webkit-calc(50% - 5em);
   left: calc(50% - 5em);
+}
+@media (orientation: portrait) {
+  #logo-text {
+    left: -webkit-calc(50% - 10em);
+    left: calc(50% - 10em);
+    width: 20em;
+  }
+}
+@media (max-width: 1024px) and (orientation: portrait) {
+  #logo-text {
+    left: -webkit-calc(50% - 7.5em);
+    left: calc(50% - 7.5em);
+    width: 15em;
+  }
 }
 @media (max-width: 568px) and (orientation: landscape) {
   #logo-text {
