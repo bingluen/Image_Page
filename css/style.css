@@ -29,6 +29,36 @@ section h1, section h2 {
   margin-bottom: 3%;
 }
 
+html.ios {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+html.ios,
+html.ios body {
+  height: initial !important;
+}
+
+#navbar > .content {
+  display: none;
+}
+@media (min-width: 600px) {
+  #navbar > .content {
+    display: block;
+  }
+}
+#navbar .mobile {
+  display: block;
+}
+#navbar .mobile > .content {
+  width: 95%;
+}
+@media (min-width: 600px) {
+  #navbar .mobile {
+    display: none;
+  }
+}
+
 #MainBlock {
   background-size: cover;
   background: url("../img/main/main.jpg");
