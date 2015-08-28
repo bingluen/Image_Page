@@ -25,6 +25,18 @@
     @include calc('left', '50% - 6em');
     width: 12em;
   }
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    @include calc('padding-top', '30% - 10em');
+    @include calc('left', '50% - 10em');
+    width: 20em;
+  }
+
+  @media (max-width: 568px) and (orientation: landscape) {
+    @include calc('padding-top', '15% - 4em');
+    @include calc('left', '50% - 4em');
+    width: 8em;
+  }
 }
 
 #logo-text {
@@ -33,12 +45,17 @@
   margin-top: 2em;
   margin-bottom: 2em;
   @include calc('left', '50% - 5em');
+
+  @media (max-width: 568px) and (orientation: landscape) {
+    @include calc('left', '50% - 4em');
+    width: 8em;
+  }
 }
 
 .scroll {
   position: absolute;
-  font-size: 3em !important;
-  @include calc('top', '90% - 1em');
-  @include calc('left', '50% - 1em');
+  font-size: 50px !important;
+  @include calc('left', '50% - 25px');
+  @include calc('top', '90% - 25px');
   @include animation(0s, 1.2s, jumping, infinite);
 }

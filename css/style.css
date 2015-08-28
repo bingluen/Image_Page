@@ -65,6 +65,24 @@ section h1, section h2 {
     width: 12em;
   }
 }
+@media (max-width: 1024px) and (orientation: landscape) {
+  #logo {
+    padding-top: -webkit-calc(30% - 10em);
+    padding-top: calc(30% - 10em);
+    left: -webkit-calc(50% - 10em);
+    left: calc(50% - 10em);
+    width: 20em;
+  }
+}
+@media (max-width: 568px) and (orientation: landscape) {
+  #logo {
+    padding-top: -webkit-calc(15% - 4em);
+    padding-top: calc(15% - 4em);
+    left: -webkit-calc(50% - 4em);
+    left: calc(50% - 4em);
+    width: 8em;
+  }
+}
 
 #logo-text {
   position: relative;
@@ -74,14 +92,21 @@ section h1, section h2 {
   left: -webkit-calc(50% - 5em);
   left: calc(50% - 5em);
 }
+@media (max-width: 568px) and (orientation: landscape) {
+  #logo-text {
+    left: -webkit-calc(50% - 4em);
+    left: calc(50% - 4em);
+    width: 8em;
+  }
+}
 
 .scroll {
   position: absolute;
-  font-size: 3em !important;
-  top: -webkit-calc(90% - 1em);
-  top: calc(90% - 1em);
-  left: -webkit-calc(50% - 1em);
-  left: calc(50% - 1em);
+  font-size: 50px !important;
+  left: -webkit-calc(50% - 25px);
+  left: calc(50% - 25px);
+  top: -webkit-calc(90% - 25px);
+  top: calc(90% - 25px);
   -webkit-animation-delay: 0s;
   -webkit-animation-duration: 1.2s;
   -webkit-animation-name: jumping;
