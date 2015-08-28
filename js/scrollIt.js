@@ -1,6 +1,6 @@
 (function(e) {
 	var width = $(window).width()
-	var offset = 1;
+	var offset = 60;
     "use strict";
     var t = "ScrollIt",
         n = "1.0.3";

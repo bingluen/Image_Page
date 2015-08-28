@@ -2,21 +2,39 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  color: #d4d4d4;
-  background-size: cover;
-  background: url("../img/main/main.jpg");
-  background-position: center center;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 .content {
   width: 80%;
   margin: 0 auto;
 }
+.content > .content {
+  width: 90%;
+  margin: 0 auto;
+}
 
 section {
   min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+section p {
+  font-size: 1.3em;
+}
+section h1, section h2 {
+  margin-bottom: 3%;
 }
 
+#MainBlock {
+  background-size: cover;
+  background: url("../img/main/main.jpg");
+  background-position: center center;
+  color: #d4d4d4;
+}
 #MainBlock h1, #MainBlock h2 {
   text-align: center;
 }
@@ -55,4 +73,111 @@ section {
   margin-bottom: 2em;
   left: -webkit-calc(50% - 5em);
   left: calc(50% - 5em);
+}
+
+.scroll {
+  position: absolute;
+  font-size: 3em !important;
+  top: -webkit-calc(90% - 1em);
+  top: calc(90% - 1em);
+  left: -webkit-calc(50% - 1em);
+  left: calc(50% - 1em);
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 1.2s;
+  -webkit-animation-name: jumping;
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 1.2s;
+  -moz-animation-name: jumping;
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-iteration-count: infinite;
+  -o-animation-delay: 0s;
+  -o-animation-duration: 1.2s;
+  -o-animation-name: jumping;
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-iteration-count: infinite;
+  animation-delay: 0s;
+  animation-duration: 1.2s;
+  animation-name: jumping;
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-iteration-count: infinite;
+}
+
+#intro {
+  margin-top: 5%;
+}
+
+@-moz-keyframes jumping {
+  0% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -moz-transform: translateY(0.25em);
+    -o-transform: translateY(0.25em);
+    -ms-transform: translateY(0.25em);
+    -webkit-transform: translateY(0.25em);
+    transform: translateY(0.25em);
+  }
+  100% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes jumping {
+  0% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -moz-transform: translateY(0.25em);
+    -o-transform: translateY(0.25em);
+    -ms-transform: translateY(0.25em);
+    -webkit-transform: translateY(0.25em);
+    transform: translateY(0.25em);
+  }
+  100% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes jumping {
+  0% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    -moz-transform: translateY(0.25em);
+    -o-transform: translateY(0.25em);
+    -ms-transform: translateY(0.25em);
+    -webkit-transform: translateY(0.25em);
+    transform: translateY(0.25em);
+  }
+  100% {
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
