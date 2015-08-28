@@ -9,7 +9,7 @@ $(document).ready(function() {
       onBottomPassedReverse: function() {
         $('.fixed.menu').transition('fade out');
       },
-      offset: 40
+      offset: 60
     });
 
   //boots nav
