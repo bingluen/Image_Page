@@ -6,11 +6,12 @@ var plugins = require('gulp-load-plugins')({
 });
 
 paths = {
-  scss: ['./sass/**/*.scss']
+  scss: ['./sass/**/*.scss'],
+  js: ['./js-src/**/*.js']
 }
 
 
-gulp.task('build', ['style']);
+gulp.task('build', ['style', 'js']);
 
 gulp.task('style', function() {
   gulp.src('./sass/')
@@ -19,17 +20,14 @@ gulp.task('style', function() {
     .pipe(plugins.minifyCSS());
 });
 
-gulp.task('react', function() {
-  gulp.src('./component/*.jsx')
-    .pipe(plugins.changed('.react-cache'))
-    .pipe(plugins.react())
-    .pipe(gulp.dest('.react-cache'))
-    .pipe(plugins.uglify())
-    .pipe(plugins.concat('bundle.js'))
+gulp.task('js', function() {
+  gulp.src(paths.js)
+    .pipe(plugins.uglifyjs('main.min.js'))
     .pipe(gulp.dest('./js/'))
 });
 
 
 gulp.task('watch', function() {
   gulp.watch(paths.scss, ['style']);
+  gulp.watch(paths.js, ['js']);
 });
