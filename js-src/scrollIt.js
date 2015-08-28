@@ -105,10 +105,13 @@
          */
         var watchActive = function() {
             var winTop = $(window).scrollTop();
-
+            /**
+             * upper bound must -4, the active will Work properly
+             * -4 is magic number by watch 
+             */
             var visible = $('[data-scroll-index]').filter(function(ndx, div) {
                 return winTop >= $(div).offset().top + settings.topOffset &&
-                winTop < $(div).offset().top + (settings.topOffset) + $(div).outerHeight()
+                winTop < $(div).offset().top + (settings.topOffset) + $(div).outerHeight() - 4
             });
             var newActive = visible.first().attr('data-scroll-index');
             updateActive(newActive);

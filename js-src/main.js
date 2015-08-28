@@ -12,4 +12,8 @@ $(document).ready(function() {
       offset: 60
     });
 
+    $.scrollIt({
+      topOffset: -60
+    })
+
 });
