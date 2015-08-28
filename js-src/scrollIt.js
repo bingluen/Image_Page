@@ -16,8 +16,6 @@
      * OPTIONS
      */
     var defaults = {
-        upKey: 38,
-        downKey: 40,
         easing: 'linear',
         scrollTime: 600,
         activeClass: 'active',
@@ -64,25 +62,7 @@
             navigate(parseInt(target));
         };
 
-        /**
-         * keyNavigation
-         *
-         * sets up keyboard navigation behavior
-         */
-        var keyNavigation = function (e) {
-            var key = e.which;
-            if($('html,body').is(':animated') && (key == settings.upKey || key == settings.downKey)) {
-                return false;
-            }
-            if(key == settings.upKey && active > 0) {
-                navigate(parseInt(active) - 1);
-                return false;
-            } else if(key == settings.downKey && active < lastIndex) {
-                navigate(parseInt(active) + 1);
-                return false;
-            }
-            return true;
-        };
+
 
         /**
          * updateActive
@@ -121,7 +101,7 @@
          */
         $(window).on('scroll',watchActive).scroll();
 
-        $(window).on('keydown', keyNavigation);
+
 
         $('body').on('click','[data-scroll-nav], [data-scroll-goto]', function(e){
             e.preventDefault();
