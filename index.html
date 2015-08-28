@@ -8,9 +8,11 @@
   <script src="js/jquery-2.1.4.min.js" charset="utf-8"></script>
   <script src="js/semantic.min.js" charset="utf-8"></script>
   <script src="js/scrollIt.js" charset="utf-8"></script>
+  <script src="js/swiper.min.js" charset="utf-8"></script>
   <script src="js/main.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/semantic.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css" media="screen">
 </head>
 
@@ -37,7 +39,7 @@
 
   <section id="intro" data-scroll-index="1">
     <div class="content">
-      <h1>關於ITAC</h1>
+      <h1 class="ui dividing header">關於ITAC</h1>
       <div class="content">
         <div class="ui stackable two column grid">
           <div class="column six wide">
@@ -55,7 +57,7 @@
 
   <section id="collections" data-scroll-index="2">
     <div class="content">
-      <h1> 作品集 </h1>
+      <h1 class="ui dividing header">作品集</h1>
       <div class="ui link cards stackable three column grid">
         <div class="column">
           <div class="ui fluid card" onclick="$('.fullscreen.modal')
@@ -150,23 +152,33 @@
       Name
     </div>
     <div class="content">
-      <div class="ui form">
-        <h4 class="ui dividing header">Give us your feedback</h4>
-        <div class="field">
-          <label>Feedback</label>
-          <textarea></textarea>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image:url(img/empty/image.png)"></div>
+          <div class="swiper-slide" style="background-image:url(img/empty/image.png)"></div>
+          <div class="swiper-slide" style="background-image:url(img/empty/image.png)"></div>
         </div>
-        <div class="field">
-          <div class="ui checkbox checked">
-            <input type="checkbox" checked="checked" name="contact-me" tabindex="0" class="hidden">
-            <label>It's okay to contact me.</label>
-          </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+      </div>
+
+      <div class="ui gird stackable two column">
+        <div class="column">
+          <h2 class="ui dividing header">團隊</h2>
+        </div>
+        <div class="column">
+          <h2 class="ui dividing header">相關連結</h2>
+
         </div>
       </div>
+
     </div>
     <div class="actions">
-      <div class="ui button">Cancel</div>
-      <div class="ui green button">Send</div>
+      <div class="ui button">Close</div>
     </div>
   </div>
 
