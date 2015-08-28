@@ -2,11 +2,10 @@ html, body{
   margin: 0;
   padding: 0;
   min-height: 100%;
-  color: hsl(0, 0%, 83%);
-  background-size: cover;
-  background: url('../img/main/main.jpg');
-  background-position: center center;
-  background-attachment: fixed;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 .content {
@@ -19,8 +18,10 @@ html, body{
 }
 
 section {
+  min-height: 100%;
   p {
     font-size: 1.3em;
   }
-  min-height: 100%;
+  margin: 0;
+  padding: 0;
 }
