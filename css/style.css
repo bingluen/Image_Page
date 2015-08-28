@@ -49,15 +49,6 @@ section h1, section h2 {
 }
 @media (orientation: portrait) {
   #logo {
-    padding-top: -webkit-calc(50% - 20em);
-    padding-top: calc(50% - 20em);
-    left: -webkit-calc(50% - 20em);
-    left: calc(50% - 20em);
-    width: 40em;
-  }
-}
-@media (max-width: 1024px) and (orientation: portrait) {
-  #logo {
     padding-top: -webkit-calc(50% - 15em);
     padding-top: calc(50% - 15em);
     left: -webkit-calc(50% - 15em);
@@ -137,8 +128,6 @@ section h1, section h2 {
   font-size: 50px !important;
   left: -webkit-calc(50% - 25px);
   left: calc(50% - 25px);
-  top: -webkit-calc(90% - 25px);
-  top: calc(90% - 25px);
   -webkit-animation-delay: 0s;
   -webkit-animation-duration: 1.2s;
   -webkit-animation-name: jumping;
@@ -167,6 +156,18 @@ section h1, section h2 {
 
 #intro {
   margin-top: 5%;
+}
+
+#collections .swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#collections .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
 @-moz-keyframes jumping {
