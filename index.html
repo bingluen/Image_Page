@@ -7,145 +7,171 @@
   <title>ITAC - Information Technology Association Club</title>
   <script src="js/jquery-2.1.4.min.js" charset="utf-8"></script>
   <script src="js/semantic.min.js" charset="utf-8"></script>
-  <script src="js/scrollIt.js" charset="utf-8"></script>
-  <script src="js/swiper.min.js" charset="utf-8"></script>
-  <script src="js/main.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/semantic.min.css">
-  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css" media="screen">
 </head>
 
 <body>
 
-  <div class="ui large top fixed menu transition hidden">
-    <div class="ui container content">
-      <a class="item" data-scroll-nav="0">Top</a>
-      <a class="item" data-scroll-nav="1">About</a>
-      <a class="item" data-scroll-nav="2">Collections</a>
-      <a class="item" data-scroll-nav="3">Story</a>
-    </div>
+  <div class="ui sidebar vertical menu">
+    <a href="#" class="item" data-scroll-nav="0">Top</a>
+    <a href="#" class="item" data-scroll-nav="1">About</a>
+    <a href="#" class="item" data-scroll-nav="2">Collections</a>
+    <a href="#" class="item" data-scroll-nav="3">Activities</a>
+    <a href="#" class="item" data-scroll-nav="4">Events</a>
+    <a href="#" class="item" data-scroll-nav="5">Recruit</a>
   </div>
 
-  <section id="MainBlock" data-scroll-index="0">
-    <img id="logo" class="ui image" src="img/ITAC-Logo.png">
-    <img id="logo-text" class="ui image" src="img/main/itac.png">
-    <div class="content">
-      <h2>成為大學生的最後一步（Ｘ）</h2>
-      <a href="#" style="color: hsl(0, 0%, 83%);"><i class="dropdown icon scroll" data-scroll-nav="1"></i></a>
-      <p id="DeviceSize"> Device大小：</p>
-      <p id="WindowSize"> 視窗大小：</p>
+    <div class="ui large top fixed menu transition hidden" id="navbar">
+      <div class="ui container content">
+        <a href="#" class="item" data-scroll-nav="0">Top</a>
+        <a href="#" class="item" data-scroll-nav="1">About</a>
+        <a href="#" class="item" data-scroll-nav="2">Collections</a>
+        <a href="#" class="item" data-scroll-nav="3">Activities</a>
+        <a href="#" class="item" data-scroll-nav="4">Events</a>
+        <a href="#" class="item" data-scroll-nav="5">Recruit</a>
+      </div>
+      <div class="mobile">
+        <div class="content">
+          <a class="item" id="sidebar-menu"><i class="sidebar icon"></i></a>
+        </div>
+      </div>
     </div>
-  </section>
 
-
-  <section id="intro" data-scroll-index="1">
-    <div class="content">
-      <h1 class="ui dividing header">關於ITAC</h1>
+    <section id="MainBlock" data-scroll-index="0">
+      <img id="logo" class="ui image" src="img/ITAC-Logo.png">
+      <img id="logo-text" class="ui image" src="img/main/itac.png">
       <div class="content">
-        <div class="ui stackable two column grid">
-          <div class="column six wide">
-            <img class="ui image medium" src="img/empty/image.png">
-          </div>
-          <div class="column ten wide">
-            <p>Information Technology Association Club ( ITAC )，是一個專門研究資訊相關技術的社團，由一群熱愛程式與實作的實踐者們共同創立，致力於推廣程式及實作的部分，鼓勵事業有成者能夠傳承自身經驗，嶄露頭角者在激盪中獲得靈感與啟發，並同時讓初出茅廬者得以對程式有更深入的了解。</p>
-            <p>資訊時代來臨，程式、數據、3C 與我們的生活緊緊相依。面對生活上的不便利，你還是只會發文抱怨嗎？程式這個科目的意義，不該只是作業有沒有交出來，期末有沒有過關拿到學分。加入 ITAC，凝聚你我微小而堅實的力量，我們聯手實現理想，用親手織就的 Code，讓改變世界不再是夢想。</p>
-          </div>
-        </div>
+        <h2>成為大學生的最後一步（Ｘ）</h2>
+        <a href="#" style="color: hsl(0, 0%, 83%);"><i class="dropdown icon scroll" data-scroll-nav="1"></i></a>
+        <p id="DeviceSize"> Device大小：</p>
+        <p id="WindowSize"> 視窗大小：</p>
       </div>
-    </div>
-  </section>
+    </section>
 
 
-  <section id="collections" data-scroll-index="2">
-    <div class="content">
-      <h1 class="ui dividing header">作品集</h1>
-      <div class="ui link cards stackable three column grid">
-        <div class="column">
-          <div class="ui fluid card" onclick="$('.fullscreen.modal')
-  .modal('show')
-;">
-            <div class="image">
-              <img src="img/empty/image.png">
+    <section id="intro" data-scroll-index="1">
+      <div class="content">
+        <h1 class="ui dividing header">關於ITAC</h1>
+        <div class="content">
+          <div class="ui stackable two column grid">
+            <div class="column six wide">
+              <img class="ui image medium" src="img/empty/image.png">
             </div>
-            <div class="content">
-              <div class="header">Matt Giampietro</div>
-              <div class="meta">
-                <a>Friends</a>
-              </div>
-              <div class="description">
-                Matthew is an interior designer living in New York.
-              </div>
+            <div class="column ten wide">
+              <p>Information Technology Association Club ( ITAC )，是一個專門研究資訊相關技術的社團，由一群熱愛程式與實作的實踐者們共同創立，致力於推廣程式及實作的部分，鼓勵事業有成者能夠傳承自身經驗，嶄露頭角者在激盪中獲得靈感與啟發，並同時讓初出茅廬者得以對程式有更深入的了解。</p>
+              <p>資訊時代來臨，程式、數據、3C 與我們的生活緊緊相依。面對生活上的不便利，你還是只會發文抱怨嗎？程式這個科目的意義，不該只是作業有沒有交出來，期末有沒有過關拿到學分。加入 ITAC，凝聚你我微小而堅實的力量，我們聯手實現理想，用親手織就的 Code，讓改變世界不再是夢想。</p>
             </div>
-            <div class="extra content">
-              <span class="right floated">
-                Joined in 2013
-              </span>
-              <span>
-                <i class="user icon"></i> 75 Friends
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="ui fluid card">
-            <div class="image">
-              <img src="img/empty/image.png">
-            </div>
-            <div class="content">
-              <div class="header">Matt Giampietro</div>
-              <div class="meta">
-                <a>Friends</a>
-              </div>
-              <div class="description">
-                Matthew is an interior designer living in New York.
-              </div>
-            </div>
-            <div class="extra content">
-              <span class="right floated">
-                Joined in 2013
-              </span>
-              <span>
-                <i class="user icon"></i> 75 Friends
-              </span>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="column">
-          <div class="ui fluid card">
-            <div class="image">
-              <img src="img/empty/image.png">
-            </div>
-            <div class="content">
-              <div class="header">Matt Giampietro</div>
-              <div class="meta">
-                <a>Friends</a>
-              </div>
-              <div class="description">
-                Matthew is an interior designer living in New York.
-              </div>
-            </div>
-            <div class="extra content">
-              <span class="right floated">
-                Joined in 2013
-              </span>
-              <span>
-                <i class="user icon"></i> 75 Friends
-              </span>
-            </div>
-          </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+
+    <section id="collections" data-scroll-index="2">
+      <div class="content">
+        <h1 class="ui dividing header">作品集</h1>
+        <div class="ui link cards stackable three column grid">
+          <div class="column">
+            <div class="ui fluid card" onclick="$('.fullscreen.modal')
+    .modal('show')
+  ;">
+              <div class="image">
+                <img src="img/empty/image.png">
+              </div>
+              <div class="content">
+                <div class="header">Matt Giampietro</div>
+                <div class="meta">
+                  <a>Friends</a>
+                </div>
+                <div class="description">
+                  Matthew is an interior designer living in New York.
+                </div>
+              </div>
+              <div class="extra content">
+                <span class="right floated">
+                  Joined in 2013
+                </span>
+                <span>
+                  <i class="user icon"></i> 75 Friends
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui fluid card">
+              <div class="image">
+                <img src="img/empty/image.png">
+              </div>
+              <div class="content">
+                <div class="header">Matt Giampietro</div>
+                <div class="meta">
+                  <a>Friends</a>
+                </div>
+                <div class="description">
+                  Matthew is an interior designer living in New York.
+                </div>
+              </div>
+              <div class="extra content">
+                <span class="right floated">
+                  Joined in 2013
+                </span>
+                <span>
+                  <i class="user icon"></i> 75 Friends
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="column">
+            <div class="ui fluid card">
+              <div class="image">
+                <img src="img/empty/image.png">
+              </div>
+              <div class="content">
+                <div class="header">Matt Giampietro</div>
+                <div class="meta">
+                  <a>Friends</a>
+                </div>
+                <div class="description">
+                  Matthew is an interior designer living in New York.
+                </div>
+              </div>
+              <div class="extra content">
+                <span class="right floated">
+                  Joined in 2013
+                </span>
+                <span>
+                  <i class="user icon"></i> 75 Friends
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
-  </section>
-  <section></section>
-  <section></section>
+    </section>
+    <section data-scroll-index="3">
+      <div class="content">
+        <h1 class="ui dividing header">活動紀錄</h1>
+      </div>
+    </section>
 
+    <section data-scroll-index="4">
+      <div class="content">
+        <h1 class="ui dividing header">近期活動</h1>
+      </div>
+    </section>
+
+    <section data-scroll-index="5">
+      <div class="content">
+        <h1 class="ui dividing header">社員招募</h1>
+      </div>
+    </section>
 
 
   <div class="ui fullscreen modal transition hidden">
@@ -154,19 +180,6 @@
       Name
     </div>
     <div class="content">
-
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image:url(img/empty/image.png)"></div>
-          <div class="swiper-slide" style="background-image:url(img/empty/image.png)"></div>
-          <div class="swiper-slide" style="background-image:url(img/empty/image.png)"></div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next swiper-button-white"></div>
-        <div class="swiper-button-prev swiper-button-white"></div>
-      </div>
 
       <div class="ui gird stackable two column">
         <div class="column">
@@ -188,6 +201,7 @@
     $('#DeviceSize').append(window.outerWidth + ' * ' + window.outerHeight)
     $('#WindowSize').append($(window).width() + ' * ' + $(window).height())
   </script>
+  <script src="js/main.min.js" charset="utf-8"></script>
 </body>
 
 </html>
