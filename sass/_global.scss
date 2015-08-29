@@ -2,6 +2,11 @@ html, body{
   margin: 0;
   padding: 0;
   min-height: 100%;
+  background: url('../img/main/background.jpg') #000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: hsl(0, 0%, 83%);
 }
 
 h1 {
