@@ -164,7 +164,11 @@ html.ios body {
 }
 
 #intro {
-  margin-top: 5%;
+  padding-top: 5%;
+}
+
+#collections .card {
+  background: #fff;
 }
 
 @-moz-keyframes jumping {
