@@ -7,6 +7,9 @@
   <title>ITAC - Information Technology Association Club</title>
   <script src="js/jquery-2.1.4.min.js" charset="utf-8"></script>
   <script src="js/semantic.min.js" charset="utf-8"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/semantic.min.css">
   <link rel="stylesheet" href="css/style.css" media="screen">
@@ -15,129 +18,310 @@
 <body>
 
 
-    <section id="MainBlock" data-scroll-index="0">
-      <img id="logo" class="ui image" src="img/ITAC-Logo.png">
-      <img id="logo-text" class="ui image" src="img/main/itac.png">
-      <div class="content">
-        <h2>成為大學生的最後一步（Ｘ）</h2>
-        <a href="#" style="color: hsl(0, 0%, 83%);"><i class="dropdown icon scroll" data-scroll-nav="1"></i></a>
-        <p id="DeviceSize"> Device大小：</p>
-        <p id="WindowSize"> 視窗大小：</p>
+  <section id="MainBlock" data-scroll-index="0">
+    <img id="logo" class="ui image" src="img/ITAC-Logo.png">
+    <img id="logo-text" class="ui image" src="img/main/itac.png">
+    <div class="" myContent "">
+      <h2>成為大學生的最後一步（Ｘ）</h2>
+      <a href="#" style="color: hsl(0, 0%, 83%);"><i class="dropdown icon scroll" data-scroll-nav="1"></i></a>
+    </div>
+  </section>
+
+
+  <section id="intro" data-scroll-index="1">
+    <div class="myContent">
+      <h1 class="ui header inverted">關於ITAC</h1>
+      <div class="myContent">
+        <div class="ui stackable two column grid">
+          <div class="column six wide">
+            <img class="ui image medium" src="img/empty/image.png">
+          </div>
+          <div class="column ten wide">
+            <p>Information Technology Association Club ( ITAC )，是一個專門研究資訊相關技術的社團，由一群熱愛程式與實作的實踐者們共同創立，致力於推廣程式及實作的部分，鼓勵事業有成者能夠傳承自身經驗，嶄露頭角者在激盪中獲得靈感與啟發，並同時讓初出茅廬者得以對程式有更深入的了解。</p>
+            <p>資訊時代來臨，程式、數據、3C 與我們的生活緊緊相依。面對生活上的不便利，你還是只會發文抱怨嗎？程式這個科目的意義，不該只是作業有沒有交出來，期末有沒有過關拿到學分。加入 ITAC，凝聚你我微小而堅實的力量，我們聯手實現理想，用親手織就的 Code，讓改變世界不再是夢想。</p>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
 
-    <section id="intro" data-scroll-index="1">
-      <div class="content">
-        <h1 class="ui header inverted">關於ITAC</h1>
-        <div class="content">
-          <div class="ui stackable two column grid">
-            <div class="column six wide">
-              <img class="ui image medium" src="img/empty/image.png">
+  <section id="collections" data-scroll-index="2">
+    <div class="myContent">
+      <h1 class="ui header inverted">作品集</h1>
+
+      <div class="ui link cards">
+
+        <div class="card" href="#" data-collection="courseSelect">
+
+          <div class="image">
+            <img src="img/collections/css/1.png">
+          </div>
+
+          <div class="content">
+            <div class="header">選課模擬器</div>
+            <div class="meta">
+              <i class="world icon"></i>Web
             </div>
-            <div class="column ten wide">
-              <p>Information Technology Association Club ( ITAC )，是一個專門研究資訊相關技術的社團，由一群熱愛程式與實作的實踐者們共同創立，致力於推廣程式及實作的部分，鼓勵事業有成者能夠傳承自身經驗，嶄露頭角者在激盪中獲得靈感與啟發，並同時讓初出茅廬者得以對程式有更深入的了解。</p>
-              <p>資訊時代來臨，程式、數據、3C 與我們的生活緊緊相依。面對生活上的不便利，你還是只會發文抱怨嗎？程式這個科目的意義，不該只是作業有沒有交出來，期末有沒有過關拿到學分。加入 ITAC，凝聚你我微小而堅實的力量，我們聯手實現理想，用親手織就的 Code，讓改變世界不再是夢想。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="collections" data-scroll-index="2">
-      <div class="content">
-        <h1 class="ui header inverted">作品集</h1>
-        <div class="ui link cards stackable three column grid">
-
-          <div class="column">
-            <div class="ui fluid card" onclick="">
-              <div class="image">
-                <img src="img/collections/drivertaipei.jpg">
-              </div>
-              <div class="content">
-                <div class="header">開車吧！台北</div>
-                <div class="meta">
-                  <p><i class="android icon"></i>Android</p>
-                </div>
-                <div class="description">
-                  一直覺得要下載很多APP，才能知道路況、知道加油站在哪、知道哪裡有停車場嗎？首款結合加油站、停車場、施工、路況資訊
-                </div>
-              </div>
+            <div class="description">
+              每次一到選課時間就手忙腳亂不知所措嗎？選課模擬器，讓你事先排好課程，選課不在手忙腳亂。
             </div>
           </div>
 
-          <div class="column">
-            <div class="ui fluid card" onclick="">
-              <div class="image">
-                <img src="img/collections/drivertaipei.jpg">
-              </div>
-              <div class="content">
-                <div class="header">選課模擬器</div>
-                <div class="meta">
-                  <p><i class="world icon"></i>Web</p>
-                </div>
-                <div class="description">
-                  一直覺得要下載很多APP，才能知道路況、知道加油站在哪、知道哪裡有停車場嗎？首款結合加油站、停車場、施工、路況資訊
-                </div>
-              </div>
+          <div class="extra content">
+            <span class="right floated">
+              2015/08/31
+            </span>
+            <span>
+              <i class="tag icon"></i> React
+            </span>
+          </div>
+
+        </div>
+
+        <div class="card" href="#" data-collection="driverTaipei">
+
+          <div class="image">
+            <img src="img/collections/drivertaipei.jpg">
+          </div>
+
+          <div class="content">
+            <div class="header">開車吧 台北</div>
+            <div class="meta">
+              <i class="android icon"></i>Andorid
+            </div>
+            <div class="description">
+              一直覺得要下載很多APP，才能知道路況、知道加油站在哪、知道哪裡有停車場嗎？首款結合加油站、停車場、施工、路況資訊App正式推出囉。
             </div>
           </div>
 
+          <div class="extra content">
+            <span class="right floated">
+              2015/08/23
+            </span>
+            <span>
+              <i class="tag icon"></i> HackNTU參賽作品
+            </span>
+          </div>
 
         </div>
+
+
       </div>
 
+    </div>
+  </section>
 
 
-    </section>
-    <section data-scroll-index="3">
-      <div class="content">
-        <h1 class="ui header inverted">活動紀錄</h1>
-      </div>
-    </section>
 
-    <section data-scroll-index="4">
-      <div class="content">
-        <h1 class="ui header inverted">近期活動</h1>
-      </div>
-    </section>
+  <section data-scroll-index="3">
+    <div class="myContent">
+      <h1 class="ui header inverted">活動紀錄</h1>
+    </div>
+  </section>
 
-    <section data-scroll-index="5">
-      <div class="content">
-        <h1 class="ui header inverted">社員招募</h1>
-      </div>
-    </section>
+  <section data-scroll-index="4">
+    <div class="myContent">
+      <h1 class="ui header inverted">近期活動</h1>
+    </div>
+  </section>
+
+  <section data-scroll-index="5">
+    <div class="myContent">
+      <h1 class="ui header inverted">社員招募</h1>
+    </div>
+  </section>
 
 
-  <div class="ui fullscreen modal transition hidden">
+  <div class="ui medium basic scrolling modal transition hidden" id="driverTaipei">
     <i class="close icon"></i>
     <div class="header">
-      Name
+      開車吧 台北
     </div>
     <div class="content">
 
-      <div class="ui gird stackable two column">
-        <div class="column">
-          <h2 class="ui dividing header">團隊</h2>
+      <div class="swiper-container">
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="text-align: center;">
+            <img src="img/collections/drivertaipei/1.jpg" class="ui image medium centered">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/collections/drivertaipei/2.jpg" class="ui image medium centered">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/collections/drivertaipei/3.jpg" class="ui image medium centered">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/collections/drivertaipei/4.jpg" class="ui image medium centered">
+          </div>
         </div>
-        <div class="column">
-          <h2 class="ui dividing header">相關連結</h2>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <h2 clas="ui header dividing">簡介</h2>
+      <div class="ui clearing divider"></div>
+      <div class="field">
+        <p>台北的風，混雜著六百多萬人口，看似平靜的城市，其實充滿了未知的資訊</p>
+        <p>一直以來，需要下載很多APP，才能知道路況、知道加油站在哪、知道哪裡有停車場等等開車有關的交通資訊，在切換app的過程中造成不必要的時間浪費。</p>
+        <p>於是，四個人，一位設計，兩位前端，一位後端，一起動手解決駕駛們的問題，只因為希望讓這個城市變得更美好。</p>
+        <div class="ui bulleted list inverted">
+          <div class="item">可以查看車流量</div>
+          <div class="item">可以立即知道路上施工狀況</div>
+          <div class="item">立即知道路況</div>
+          <div class="item">查詢台北停車場、機車車位</div>
+          <div class="item">可以查詢附近的加油站</div>
+          <div class="item">查到什麼馬上地圖導引</div>
+        </div>
+      </div>
+
+      <h2 clas="ui header dividing">相關資訊</h2>
+      <div class="ui clearing divider"></div>
+      <div class="field">
+        <div class="ui large horizontal list">
+          <div class="item">
+            <a href="https://play.google.com/store/apps/details?id=hackntu2015.edu.yzu.drivertaipei" target="_blank">
+              <img class="ui small image" src="http://developer.android.com/images/brand/en_generic_rgb_wo_60.png">
+            </a>
+
+          </div>
+          <div class="item">
+            <a href="https://github.com/singbird81/DriverTaipei" target="_blank">
+              <img style="-webkit-filter: invert(1);" class="ui small image" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png">
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+      <h2 clas="header">開發團隊</h2>
+      <div class="ui clearing divider"></div>
+      <div class="field">
+        <div class="ui relaxed list large inverted">
+          <div class="item">
+            <img class="ui avatar image" src="http://www.gravatar.com/avatar/7bc81b728640a4917ec3b6625d16425e">
+            <div class="content">
+              <a class="header">Erickson Juang</a>
+              <div class="description">Back-End Enginner</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img class="ui avatar image" src="http://www.gravatar.com/avatar/d6fbac2d047276a369c1841e4a20e224">
+            <div class="content">
+              <a class="header">Ren Chen</a>
+              <div class="description">UI/UX Designer</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img class="ui avatar image" src="http://www.gravatar.com/avatar/d5b2bbf8ed3c2aa50191b5cd0f98d1e5">
+            <div class="content">
+              <a class="header">Andy Chen</a>
+              <div class="description">Front-End Enginner</div>
+            </div>
+          </div>
+
+          <div class="item">
+            <img class="ui avatar image" src="http://www.gravatar.com/avatar/16350554aea3aca503e5caebf6e1d360">
+            <div class="content">
+              <a class="header">Wu Guan Xian</a>
+              <div class="description">Front-End Enginner</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="actions">
+      <div class="ui inverted button">Close</div>
+    </div>
+
+  </div>
+
+  <div class="ui medium basic scrolling modal transition hidden" id="courseSelect">
+    <i class="close icon"></i>
+    <div class="header">
+      選課模擬器
+    </div>
+    <div class="content">
+
+      <div class="swiper-container">
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="text-align: center;">
+            <img src="img/collections/css/1.png" class="ui image huge centered">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/collections/css/2.png" class="ui image large centered">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/collections/css/3.png" class="ui image large centered">
+          </div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <h2 clas="ui header dividing">簡介</h2>
+      <div class="ui clearing divider"></div>
+      <div class="field">
+        <p>每次一到選課時間就手忙腳亂不知所措嗎？選課模擬器，讓你事先排好課程，選課不在手忙腳亂。</p>
+        <div class="ui bulleted list inverted">
+          <div class="item">匯出課表網址</div>
+          <div class="item">透過開課系所、教師、可修課年級等進行查詢</div>
+          <div class="item">可自訂課表節數、天數</div>
+          <div class="item">開放原始碼</div>
+        </div>
+      </div>
+
+      <h2 clas="ui header dividing">相關資訊</h2>
+      <div class="ui clearing divider"></div>
+      <div class="field">
+        <div class="ui small horizontal list inverted">
+          <div class="item">
+            <a href="http://erickson-makotoki.github.io/yzu-css/" target="_blank">網頁連結</a>
+          </div>
+          <div class="item">
+            <a href="http://github.com/erickson-makotoki/yzu-css/">Source Code</a>
+          </div>
+        </div>
+
+      </div>
+
+      <h2 clas="header">開發團隊</h2>
+      <div class="ui clearing divider"></div>
+      <div class="field">
+        <div class="ui relaxed list large inverted">
+          <div class="item">
+            <img class="ui avatar image" src="http://www.gravatar.com/avatar/7bc81b728640a4917ec3b6625d16425e">
+            <div class="content">
+              <a class="header">Erickson Juang</a>
+              <div class="description"></div>
+            </div>
+          </div>
 
         </div>
       </div>
 
     </div>
+
     <div class="actions">
-      <div class="ui button">Close</div>
+      <div class="ui inverted button">Close</div>
     </div>
+
   </div>
 
-  <script type="text/javascript">
-    $('#DeviceSize').append(window.outerWidth + ' * ' + window.outerHeight)
-    $('#WindowSize').append($(window).width() + ' * ' + $(window).height())
-  </script>
-  <script src="js/main.min.js" charset="utf-8"></script>
+
 </body>
 
 </html>

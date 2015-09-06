@@ -6,43 +6,29 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  color: #d4d4d4;
 }
 
 h1 {
   font-size: 3em;
 }
 
-.content {
+.myContent {
   width: 80%;
   margin: 0 auto;
 }
-.content > .content {
+.myContent > .myContent {
   width: 90%;
   margin: 0 auto;
 }
 
 section {
+  color: #d4d4d4;
   min-height: 100%;
   margin: 0;
   padding: 0;
 }
-section p {
-  font-size: 1.3em;
-}
 section h1, section h2 {
-  font-size: 24pt;
   margin-bottom: 3%;
-}
-
-html.ios {
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-}
-
-html.ios,
-html.ios body {
-  height: initial !important;
 }
 
 #MainBlock h1, #MainBlock h2 {
