@@ -1,0 +1,31 @@
+.swipe-container {
+  padding-bottom: 2em;
+  .swipe-slides {
+    z-index: 0;
+    .hidden {
+      display:none;
+    }
+    .swipe-slide {
+      margin: 0 auto;
+    }
+  }
+
+  .swipe-button-prev {
+    z-index: 999;
+    position: relative;
+    margin-top: -25%;
+    margin-bottom: 25%;
+    padding-bottom: -25%;
+    float: left;
+    font-size: 2em;
+  }
+  .swipe-button-next {
+    z-index: 999;
+    position: relative;
+    margin-top: -25%;
+    margin-bottom: 25%;
+    padding-bottom: -25%;
+    float: right;
+    font-size: 2em;
+  }
+}
