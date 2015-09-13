@@ -1,33 +1,77 @@
+var path = require('path');
 var gulp = require('gulp');
-var plugins = require('gulp-load-plugins')({
-  rename: {
-    "gulp-minify-css": 'minifyCSS'
-  }
-});
+var rename = require('gulp-rename');
+var changed = require('gulp-changed');
+var compass = require('gulp-compass');
+var uglifyjs = require('gulp-uglifyjs');
+var minifyCSS = require('gulp-minify-css');
+var browserify = require('gulp-browserify');
+var react = require('gulp-react');
+var gulpCopy = rquire('gulp-copy');
 
-paths = {
-  scss: ['./sass/**/*.scss'],
-  js: ['./js-src/**/*.js']
+var paths = {
+  sass: ['./sass/'],
+  reactComponent: ['./component/**/*.jsx'],
+  jsSrc: './js-src/*.js'
 }
 
-
-gulp.task('build', ['style', 'js']);
-
 gulp.task('style', function() {
-  gulp.src('./sass/')
-    .pipe(plugins.changed('.sass-cache'))
-    .pipe(plugins.compass())
-    .pipe(plugins.minifyCSS());
+  gulp.src(paths.sass)
+    .pipe(changed('.sass-cache'))
+    .pipe(compass({
+      project: path.join(__dirname),
+      css: 'css',
+      sass: 'sass'
+    }))
 });
 
-gulp.task('js', function() {
-  gulp.src(paths.js)
-    .pipe(plugins.uglifyjs('main.min.js'))
+gulp.task('react', function() {
+  gulp.src(paths.reactComponent)
+    .pipe(react())
+    .pipe(gulp.dest('./js-src/component/'))
+})
+
+gulp.task('browserify', function() {
+  gulp.src(paths.jsSrc)
+    .pipe(browserify())
+    .pipe(uglifyjs())
+    .pipe(rename('main.min.js'))
     .pipe(gulp.dest('./js/'))
 });
 
+gulp.task('outputFile', function() {
+  var fileList = {
+    images: 'img/**.**',
+    js: [
+      'js/jquery-2.1.4.min.js',
+      'js/main.min.js',
+      'js/react-0.13.3.js',
+      'js/scrollit.js',
+      'js/semantic.min.js',
+      'js/swiper.min.js'
+    ],
+    css: [
+      'css/**/**.css',
+      'themes/**/**.**'
+    ],
+    html: [
+      'index.html'
+    ]
 
-gulp.task('watch', function() {
-  gulp.watch(paths.scss, ['style']);
-  gulp.watch(paths.js, ['js']);
-});
+    //bundle images
+    gulp.src(fileList.images)
+      .pipe(gulpCopy('bundle/img'))
+    ;
+
+    //bundle css file
+    gulp.src(fileList.css)
+      .pipe(gulpCopy('bundle/css'))
+    ;
+
+    //bundle html file
+    gulp.src(fileList.html)
+      .pipe(gulpCopy('bundle/'))
+  }
+})
+
+gulp.task('build', ['style', 'react', 'browserify', 'outputFile'])

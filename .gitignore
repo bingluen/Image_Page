@@ -2,5 +2,6 @@
 .react-cache/
 node_modules/
 .DS_store
-js/bundle.js
-component/
+css/style.css
+js/main.min.js
+
