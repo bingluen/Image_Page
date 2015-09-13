@@ -41,7 +41,7 @@ gulp.task('browserify', function() {
 
 gulp.task('outputFile', function() {
   var fileList = {
-    images: 'img/**.**',
+    images: 'img/**/**.**',
     js: [
       'js/jquery-2.1.4.min.js',
       'js/main.min.js',
