@@ -52,7 +52,7 @@ gulp.task('outputFile', function() {
     ],
     css: [
       'css/**/**.css',
-      'themes/**/**.**'
+      'css/themes/**/**.**'
     ],
     html: [
       'index.html'
