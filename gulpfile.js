@@ -7,7 +7,7 @@ var uglifyjs = require('gulp-uglifyjs');
 var minifyCSS = require('gulp-minify-css');
 var browserify = require('gulp-browserify');
 var react = require('gulp-react');
-var gulpCopy = rquire('gulp-copy');
+var gulpCopy = require('gulp-copy');
 
 var paths = {
   sass: ['./sass/'],
@@ -57,21 +57,15 @@ gulp.task('outputFile', function() {
     html: [
       'index.html'
     ]
-
-    //bundle images
-    gulp.src(fileList.images)
-      .pipe(gulpCopy('bundle/img'))
-    ;
-
-    //bundle css file
-    gulp.src(fileList.css)
-      .pipe(gulpCopy('bundle/css'))
-    ;
-
-    //bundle html file
-    gulp.src(fileList.html)
-      .pipe(gulpCopy('bundle/'))
   }
+
+  //bundle file
+  for (fileType in fileList) {
+    gulp.src(fileList[fileType])
+      .pipe(gulpCopy('bundle/'))
+    ;
+  }
+
 })
 
 gulp.task('build', ['style', 'react', 'browserify', 'outputFile'])
